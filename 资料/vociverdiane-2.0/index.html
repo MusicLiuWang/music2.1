@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>音乐比赛</title>
+        <link rel="stylesheet" href="css/jquery.fullPage.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery-ui-1.10.3.min.js"></script>
+        <script src="js/jquery.fullPage.min.js"></script>
+        <script>
+            $(function() {
+                $.fn.fullpage({
+                    /*slidesColor: ['#0075D1', '#C2E5FF', '#FDF6E1', '#E9E9E9', '#F3F3F3', '#F9F3DC'],*/
+                    anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+                    menu: '#menu',
+                    //页面初始化完成后的回调函数
+                    afterRender: function() {
+                        $('.screen-main span').each(function() {
+                            var $rel = $(this).attr('rel');
+                            var $arr = $rel.split(',');
+                            $(this).animate({
+                                left: $arr[2] + 'px',
+                                top: $arr[3] + 'px'
+                            }, 500);
+                        });
+                        $('.inner a').each(function() {
+                            var $rel = $(this).attr('rel');
+                            var $arr = $rel.split(',');
+                            $(this).animate({
+                                left: $arr[0] + 'px',
+                                top: $arr[1] + 'px'
+                            }, 500);
+                        });
+                    },
+                    //滚动到某一屏后的回调函数
+                    //加载事件
+                    afterLoad: function(anchorLink, index) {
+                        if (index == 1) {
+                            $('.screen-main span').each(function() {
+                                var $rel = $(this).attr('rel');
+                                var $arr = $rel.split(',');
+                                $(this).animate({
+                                    left: $arr[2] + 'px',
+                                    top: $arr[3] + 'px'
+                                }, 500);
+                            });
+                        }
+                        if (index == 2 || index == 3 || index == 4) {
+                            $('.inner').eq(index - 2).find('a').each(function() {
+                                var $rel = $(this).attr('rel');
+                                var $arr = $rel.split(',');
+                                $(this).animate({
+                                    left: $arr[2] + 'px',
+                                    top: $arr[3] + 'px'
+                                }, 500);
+                            });
+                        }
+                        if (index == 5) {
+                            $('.zanzhu-con a').fadeIn(1000);
+                        }
+                    },
+                    //离开事件 滚动前的回调函数
+                    onLeave: function(index, direction) {   
+                        if (index == 1) {
+                            $('.screen-main span').each(function() {
+                                var $rel = $(this).attr('rel');
+                                var $arr = $rel.split(',');
+                                $(this).animate({
+                                    left: $arr[0] + 'px',
+                                    top: $arr[1] + 'px'
+                                }, 500);
+                            });
+                        }
+                        if (index == 2 || index == 3 || index == 4 || index == 5 || index == 6) {
+                            $('.inner').eq(index - 2).find('a').each(function() {
+                                var $rel = $(this).attr('rel');
+                                var $arr = $rel.split(',');
+                                $(this).animate({
+                                    left: $arr[0] + 'px',
+                                    top: $arr[1] + 'px'
+                                }, 500);
+                            });
+                        }
+                        if (index == 7) {
+                            $('.zanzhu-con a').fadeOut(1000);
+                        }
+                    }
+                });
+            });
+            function a_click(obj){
+                var address = $(obj).attr("address");
+                /*window.location.href = address;*/
+                window.open(address);
+            }
+            function getInfo(obj){
+                var message = $(obj).attr('val');
+                var index = $(obj).attr('index');
+                var info = '<span class="span_hidden">'+message+'</span>';
+                $('.'+index).html(info);
+            }
+            $(function(){
+                 $('.gameImg').mousemove(function()
+                {
+                    getInfo(this);
+                }).mouseout(function()
+                {
+                     var index = $(this).attr('index');
+                     $('.'+index).html("");
+                })
+            })
+            
+        </script>
+    </head>
+
+    <body>
+
+        <ul id="menu">
+            <li data-menuanchor="page1" class="active">
+                <a href="#page1">
+                    <p>首页</p>
+                </a>
+            </li>
+            <li data-menuanchor="page2">
+                <a href="#page2">
+                    <p>报名</p>
+                </a>
+            </li>
+            <li data-menuanchor="page3">
+                <a href="#page3">
+                    <p>赛程</p>
+                </a>
+            </li>
+            <li data-menuanchor="page4">
+                <a href="#page4">
+                    <p>评委</p>
+                </a>
+            </li>
+           
+            <li data-menuanchor="page5">
+                <a href="#page5">
+                    <p>赞助</p>
+                </a>
+            </li>
+        </ul>
+        <!--第一个页面-->
+        <div class="section home_page">
+            <div class="screen-main">
+                <span class="paolo_name"  rel="-1389,-490,0,0"></span>
+                <span class="game_name"  rel="1387,-359,-260,125"></span>
+                <span class="logo_img"  rel="-619,-359,120,321"></span>
+            </div>
+        </div>
+        <!--第二个页面-->
+        <div class="section enroll_page">
+            <div class="science-inner inner enroll_div">
+                <a class="stiteml st4" href="javascript:void(0)" rel="300,-350,300,128">赛事要求</a>
+                <a class="stitemr st5" href="javascript:void(0)" rel="-710,316,300,226">大赛要求</a>
+                <a class="stitemr st9" href="javascript:void(0)" rel="-710,346,300,266" style="display:block">
+                    <ul class="stitemr">
+                        <li>1、参赛选手年龄截止2016年4月30号之前未满40周岁；</li>
+                        <li>2、参赛选手需准备四首歌剧咏叹调，其中两首必须为意大利语。若选手预参加“威尔第作品最佳演唱奖”的角逐需准备威尔第歌剧咏叹调（包括宣叙调、咏叹调、cabaletta），另外两首歌剧咏叹调需在1700至1900时期内。演唱使用原作语言；</li>
+                        <li>3、比赛注册费500元人民币，如参加“威尔第最佳演唱奖”的角逐需另加100元人民币。请选手于5月20日前交到大赛秘书处；</li>
+                    </ul>
+                </a>
+                
+                <a class="stiteml st14" href="javascript:void(0)" rel="300,1050,300,376">报名须知</a>
+                <a class="stiteml st15" href="javascript:void(0)" rel="300,1050,300,416">1、一份填写完毕的报名表，<span onclick="a_click(this)" class="download_address" address="http://www.htu.cn/yyxy" >河南师范大学音乐舞蹈学院主页http://www.htu.cn/yyxy</span>；</a>
+                <a class="stiteml st16" href="javascript:void(0)" rel="300,1050,300,446">2、四张2寸同底免冠照片；</a>
+                <a class="stiteml st17" href="javascript:void(0)" rel="300,1050,300,476">
+                3、报名截止日期：2016年5月20日，请提前通过电子邮箱寄出报名表，以确保组委会在截止日期之前收到；</a>
+                <a class="stiteml st18" href="javascript:void(0)" rel="300,1050,300,506">4、电子邮箱：luciano3325267@163.com；</a>        
+                
+                <a class="stimg4" href="javascript:void(0)" rel="1400,150,1000,150">
+                    <div style="color:#fff;padding:10px;10px;10px;10px;background:#49146f;font-size:14px;letter-spacing:1px;" onclick="a_click(this)" address="http://www.htu.cn/yyxy" >点击下载报名表</div>
+                </a>
+            </div>
+        </div>
+        <!--第三个页面-->
+        <div class="section schedule_page">
+            <div class="famous-inner inner schedule_div" style="width:1260px;">
+                <a class="faitemr fa1" href="javascript:void(0)"  rel="-610,168,280,168">
+                    <div class="game_plan">
+                        <p>初赛</p>
+                        <p>2015年3月4、5、6日在</p>
+                        <p>所在报曲目中选一首</p>
+                        <p>参加比赛</p>
+                    </div>
+                </a>
+                <a class="faiteml fa4" href="javascript:void(0)" rel="435,-483,485,83">
+                    <div class="game_plan">
+                        <p>复赛</p>
+                        <p>2015年3月7、8日由评</p>
+                        <p>委在所有报曲目中选</p>
+                        <p>择一首选手演唱</p>
+                    </div>
+                </a>
+                <a class="faiteml fa7" href="javascript:void(0)" rel="1500,317,736,200,">
+                    <div class="game_plan">
+                        <p>大师班</p>
+                        <p>2015年3月9、10日进入</p>
+                        <p>绝赛选手可免费参加</p>
+                        <p>大师班</p>
+                    </div>
+                </a>
+                <a class="faiteml fa11" href="javascript:void(0)" rel="786,983,856,403">
+                    <div class="game_plan">
+                        <p>决赛</p>
+                        <p>2015年3月11日决赛音</p>
+                        <p>乐会选手必须演唱2首</p>
+                        <p>由评委选出的曲目</p>
+                    </div>
+                </a>
+                <a class="faiteml fa11" href="javascript:void(0)" rel="-786,1363,256,363">
+                <p style="color:#fff;font-size:48px;">比赛日程安排</p></a>
+                <a class="faiteml fa11" href="javascript:void(0)" rel="0,0,236,133">
+                    <div class="xiaopaopao"></div>
+                </a>
+                <a class="faiteml fa11" href="javascript:void(0)" rel="-786,333,406,483">
+                    <div class="xiaopaopao"></div>
+                </a>
+            </div>
+        </div>
+        <!--第四个页面-->
+        <div class="section jury_page">
+            <div class="social-inner inner jury_div" style="width:1260px;">
+                <a class="soiteml" href="javascript:void(0)" rel="550,-175,550,21">
+                    <div>
+                        <div class="title">评委会成员</div>
+                        <div class="en_title">Member of the jury</div>
+                    </div>
+                </a>
+                <!-- 初赛和半决赛 -->
+                <a class="soiteml" href="javascript:void(0)" rel="-500,110,200,110">
+                    <div>
+                        <div class="title_time">初赛和半决赛评委</div>
+                    </div>
+                </a>
+                <a class="soiteml" href="javascript:void(0)" rel="-1550,125,220,155">
+                    <div>
+                        <span class="xin" style="background: #383838;">保</span>
+                        <span class="jury_name">
+                            <p>保罗 · 科尼</p>
+                            <p>Paolo · Coni</p>
+                            <p>大赛组委会</p>
+                            <p>艺术总监</p>
+                        </span>
+                    </div>
+                </a>
+                <a class="soiteml" href="javascript:void(0)" rel="-1550,155,420,155">
+                    <div>
+                        <span class="xin" style="background: #8d0a38;">马</span>
+                        <span class="jury_name">
+                            <p>马克 · 贝雷依</p>
+                            <p>Marco · Bellei</p>
+                            <p>著名声乐指导</p>
+                            <p>钢琴家 指挥家</p>
+                        </span>
+                    </div>
+                </a>
+                <a class="soiteml" href="javascript:void(0)" rel="1550,155,640,155">
+                    <div>
+                        <span class="xin" style="background: #ad7332;">段</span>
+                        <span class="jury_name">
+                            <p>段续</p>
+                            <p>河南师范大学</p>
+                            <p>音乐舞蹈学院</p>
+                            <p>院长</p>
+                        </span>
+                    </div>
+                </a>
+                <a class="soiteml" href="javascript:void(0)" rel="1550,155,860,155">
+                    <div>
+                        <span class="xin" style="background: #2c4621;">何</span>
+                        <span class="jury_name">
+                            <p>何军</p>
+                            <p>南阳师范学院</p>
+                            <p>音乐系主任</p>
+                        </span>
+                    </div>
+                </a>
+                <!-- 决赛 -->
+                <a class="soiteml" href="javascript:void(0)" rel="-550,245,200,245">
+                    <div>
+                        <div class="title_time">决赛评委</div>
+                    </div>
+                </a>
+                <a class="soiteml" href="javascript:void(0)" rel="-1550,280,220,280">
+                    <div>
+                        <span class="xin" style="background: #383838;">保</span>
+                        <span class="jury_name">
+                            <p>保罗 · 科尼</p>
+                            <p>Paolo · Coni</p>
+                            <p>大赛组委会</p>
+                            <p>艺术总监</p>
+                        </span>
+                    </div>
+                </a>
+                <a class="soiteml" href="javascript:void(0)" rel="-1550,280,420,280">
+                    <div>
+                        <span class="xin" style="background: #8d0a38;">汤</span>
+                        <span class="jury_name">
+                            <p>汤沐海</p>
+                            <p>国际著名指挥家</p> 
+                            <p>中国赛区评委会</p><p>主席</p>
+                        </span>
+                    </div>
+                </a>
+                <a class="soiteml" href="javascript:void(0)" rel="1550,280,640,280">
+                    <div>
+                        <span class="xin" style="background: #ccc;">贝</span>
+                        <span class="jury_name">
+                            <p>贝雷依</p>
+                            <p>Marco · Bellei</p>
+                            <p>著名声乐指导 </p>
+                            <p>钢琴家 指挥家</p>
+                        </span>
+                    </div>
+                </a>
+                
+               
+                <!-- 奖项设置 -->
+                <a class="soiteml" href="javascript:void(0)" rel="570,1175,570,421">
+                    <div>
+                        <div class="title">奖项设置</div>
+                        <div class="en_title">Award Setting</div>
+                    </div>
+                </a>
+                <!-- 奖项 -->
+                <a class="soiteml" href="javascript:void(0)" rel="200,1175,200,511">
+                    <div style="line-height:1.5em;">
+                        <div class="award_content">* 获奖者将获得由大赛组委会颁发直接进入意大利“Cleto Tomba”国际声乐大赛资格证书
+                            <br/> 和意大利决赛期间的住宿和往返机票费用</div>
+                        <div class="award_content">* 比赛获胜者（前两名）将由著名指挥家汤沐海先生指挥交响乐团为其伴奏举行与音乐会</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--第五个页面-->
+
+        <div class="section">
+            <div class="zanzhu">
+                <h2>合作媒体</h2>
+                <div class="zanzhu-con">
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/zhongguoshisheng.png"></a>
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/beijingxinwen.png"></a>
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/jiangxijiaotong.png"></a>
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/jinanjiaotong.png"></a>
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/zhongguoshisheng.png"></a>
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/hubeijiaotong.png"></a>
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/xichuanwenyi.png"></a>
+                    <a href="javascript:void(0)"><img width="190" height="76" src="images/hunanjiaotong.png"></a>
+                </div>
+                <div class="foot clearfix">
+                    <!-- <p class="beian">备案号：123456789</p> -->
+                    <p class="ft">&copy;2015　<a href="javascript:void(0)" onclick="a_click(this)" address="http://www.htu.cn/yyxy">河南师范大学音乐舞蹈学院</a></p>
+                </div>
+            </div>
+        </div>
+       
+        <script type="text/javascript">
+            function nameClick(obj){
+                //alert(123);
+                $("#video_embed1").remove();
+                var video_name = $(obj).attr("val");
+                //console.log(video_name);
+                var str =  '<embed src="'+video_name+'"'+
+                    ' allowFullScreen="true" '+' quality="high" width="600" height="450" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>';
+                $(".video_play").html(str);
+            }
+        </script>
+    </body>
+</html>
