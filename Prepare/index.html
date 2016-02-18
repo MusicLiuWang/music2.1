@@ -3,13 +3,30 @@
 <head>
 <meta charset="utf-8">
 <title>fullPage.js — 绑定菜单演示_dowebok</title>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/jquery.fullPage.css">
 <link rel="stylesheet" href="css/index.css">
 
+
+
+
+
+
+
+<script src="js/modernizr.js"></script>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="js/index.js"></script>
+
+
+
+
 </head>
 
 <body>
@@ -59,7 +76,7 @@
 				<div>
 					<h2>报名须知</h2>
 					<ul style="font-size: 16px;" class="claim">
-						<li>1、一份填写完毕的【报名表】,<a href="Download/table.docx" style="color: #ffffff;"  target="_self">下载地址: www.paoloconiconcorsoliricocinese.com。</a></li>
+						<li>1、一份填写完毕的【报名表】,<a href="www.paoloconiconcorsoliricocinese.com" style="color: #ffffff;">下载地址: www.paoloconiconcorsoliricocinese.com。</a></li>
 						<li>2、4张2寸同底免冠照片。</li>
 						<li>3、报名截止日期为2016年5月20日请提前通过电子邮箱寄出报名表,以确保组委会在截止前收到。</li>
 						<li>4、电子邮箱:luciano3325367@163.com。</li>
@@ -74,8 +91,60 @@
 	<div class="section" style="background-image: url('images/3.jpg');position: relative;">
 		<div style="width: 100%;height: 100%;background-color: red;position: absolute;left: 0px;top: 0px;">
 			<img src="images/orange.png" style="width: 100%;height: 100%;">
-			<div style="position: absolute;width: 100%;height: 100%;background: black;top: 40%">
-				<h3>比赛日程安排</h3>
+			<div style="position: absolute;width: 70%;height: 70%;background: none;top: 15%;left: 15%;">
+				<h1>比赛日程安排</h1>
+				<article class="htmleaf-container" >
+					<section class="cd-horizontal-timeline" style="margin-top: 10px;">
+						<div class="timeline">
+							<div class="events-wrapper" >
+								<div class="events">
+									<ol>
+										<li><a href="#0" data-date="16/01/2014" class="selected">初赛</a></li>
+										<li><a href="#0" data-date="28/02/2014">复赛</a></li>
+										<li><a href="#0" data-date="20/04/2014">复赛</a></li>
+										<li><a href="#0" data-date="20/05/2014">决赛音乐会</a></li>
+									</ol>
+									<span class="filling-line" aria-hidden="true"></span>
+								</div> <!-- .events -->
+							</div> <!-- .events-wrapper -->
+						</div> <!-- .timeline -->
+						<div class="events-content">
+							<ol>
+								<li class="selected" data-date="16/01/2014">
+									<h2>Horizontal Timeline</h2>
+									<em>January 16th, 2014</em>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+									</p>
+								</li>
+
+								<li data-date="28/02/2014">
+									<h2>Event title here</h2>
+									<em>February 28th, 2014</em>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+									</p>
+								</li>
+
+								<li data-date="20/04/2014">
+									<h2>Event title here</h2>
+									<em>March 20th, 2014</em>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+									</p>
+								</li>
+
+								<li data-date="20/05/2014">
+									<h2>Event title here</h2>
+									<em>May 20th, 2014</em>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+									</p>
+								</li>
+							</ol>
+						</div> <!-- .events-content -->
+					</section>
+				</article>
 			</div>
 		</div>
 	</div>
