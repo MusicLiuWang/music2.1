@@ -21,18 +21,20 @@
     top: 30%;
     list-style-type: none;
     z-index: 70;
+
 }
 
 #menu li {
+    margin-top: 30px;
     font-size: 14px;
 }
 
 #menu a {
+
     font-size: 90%;
     letter-spacing: 2px;
     font-family:"Microsoft YaHei", sans-serif;
     margin-top: 18px;
-    float: left;
     padding: 10px 20px;
     background-color: #fff;
     color: #333;
@@ -81,7 +83,7 @@
     font-size: 16px;
 }
 .claim li{
-    margin-top: 5px;
+    margin-top: 3px;
     letter-spacing: 2px;
 }
 .claim h3{
