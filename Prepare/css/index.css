@@ -38,14 +38,15 @@
     font-size: 14px;
 }
 #menu a {
-
-    font-size: 90%;
-    letter-spacing: 2px;
-    font-family:"Microsoft YaHei", sans-serif;
+    display: block;
+    width: 100%;
     margin-top: 18px;
     padding: 10px 20px;
+    letter-spacing: 2px;
+    font-family:"Microsoft YaHei", sans-serif;
     background-color: #fff;
     color: #333;
+    font-size: 90%;
     text-decoration: none;
 }
 
@@ -87,7 +88,7 @@
     display: inline-block;
     transition: 0.5s;
     height: 46px;
-    width: 10%;
+    width: 20%;
     margin: 0;
     line-height: 46px;
     color: #ffffff;
