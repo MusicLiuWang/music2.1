@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>图片浏览</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/pictures.css">
+	<link rel="stylesheet" type="text/css" href="../css/default.css">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<head>
+		<a href="../index.html"><img src="../images/back.png" alt="返回"></a>
+	</head>
+
+	<div class="container">
+		<!-- progressbar -->
+		<section id="progressbar-slider" class="sample slider--animated" data-slidizle data-slidizle-loop="true" data-slidizle-timeout="3000" data-slidizle-pause-on-hover="true">
+
+			<ul class="slider-content" data-slidizle-content>
+		
+				<li data-slidizle-slide-id="slide1" class="slider-item" style="background-image:url('../images/pictures/01.jpg')">
+					<header>
+						<h2>中文</h2>
+						<h3>English</h3>
+					</header>
+				</li>
+
+				<li data-slidizle-slide-id="slide2" data-slidizle-timeout="1000" class="slider-item" style="background-image:url('../images/pictures/02.jpg')">
+				</li>
+
+				<li data-slidizle-slide-id="slide3" class="slider-item" style="background-image:url('../images/pictures/03.jpg')">
+				</li>
+
+				<li data-slidizle-slide-id="slide4" class="slider-item" style="background-image:url('../images/pictures/04.jpg')">
+				</li>
+
+				<li data-slidizle-slide-id="slide5" class="slider-item" style="background-image:url('../images/pictures/05.jpg')">
+				</li>
+
+				<li data-slidizle-slide-id="slide6" class="slider-item" style="background-image:url('../images/pictures/06.jpg')">
+				</li>
+
+				<li data-slidizle-slide-id="slide7" class="slider-item" style="background-image:url('../images/pictures/07.jpg')">
+				</li>
+				<li data-slidizle-slide-id="slide8" class="slider-item" style="background-image:url('../images/pictures/08.jpg')">
+				</li>
+				<li data-slidizle-slide-id="slide9" class="slider-item" style="background-image:url('../images/pictures/09.jpg')">
+				</li>
+
+				<li data-slidizle-slide-id="slide10" class="slider-item" style="background-image:url('../images/pictures/10.jpg')">
+				</li>
+			</ul>
+
+			<div class="slider-next" data-slidizle-next>
+				<i class="glyphicon glyphicon-arrow-right"></i>
+			</div>
+			<div class="slider-previous" data-slidizle-previous>
+				<i class="glyphicon glyphicon-arrow-left"></i>
+			</div>
+
+			<div class="slider-progressbar"></div>
+
+			<ul class="slider-navigation" data-slidizle-navigation>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide1" style="background-image:url('../images/pictures/01.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide2" style="background-image:url('../images/pictures/02.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide3" style="background-image:url('../images/pictures/03.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide4" style="background-image:url('../images/pictures/04.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide5" style="background-image:url('../images/pictures/05.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide6" style="background-image:url('../images/pictures/06.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide7" style="background-image:url('../images/pictures/07.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide8" style="background-image:url('../images/pictures/08.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide9" style="background-image:url('../images/pictures/09.jpg')">
+				</li>
+				<li class="slider-navigation-item" data-slidizle-slide-id="slide10" style="background-image:url('../images/pictures/10.jpg')">
+				</li>
+			</ul>
+
+			<div class="slidizle-loading">
+			</div>
+
+		</section>
+	</div>
+	
+	<script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+	<script src="../js/jquery.slidizle.js"></script>
+
+	<script>
+
+		jQuery(function($) {
+
+			// setup slidizle
+			$('[data-slidizle]').slidizle({
+				beforeChange : function(api) {
+/*					console.log('previous', api.getPreviousSlide().index());
+					console.log('current', api.getCurrentSlide().index());
+					console.log('next', api.getNextSlide().index());
+					console.log('previous active', api.getPreviousActiveSlide().index());*/
+				}
+			});
+
+		});
+
+	</script>
+	<!-- script to manage slider (normally not in html like this...) -->
+	<script>
+		jQuery(function($) {
+
+			var $slider = $('#progressbar-slider');
+			// $slider.slidizle();
+			var $progressbar = $slider.find('.slider-progressbar');
+				api = $slider.data('slidizle_api');
+
+			$slider.bind('slidizle.change', function(e, api) {
+				console.log('change');
+				$progressbar.stop().css('width', 0);
+			});
+			$slider.bind('slidizle.pause', function(e, api) {
+				$progressbar.stop();
+				console.log('timer pause', api.getCurrentTimeout(), api.getTotalTimeout(), api.getRemainingTimeout());
+			});
+			$slider.bind('slidizle.play slidizle.resume slidizle.change', function(e, api) {
+				console.log('timer start', api.getCurrentTimeout(), api.getTotalTimeout(), api.getRemainingTimeout());
+
+				// do nothing is is hover
+				if (api.isHover()) return;
+
+				// manage progressbar :
+				$progressbar.animate({
+					width : '100%'
+				}, api.getRemainingTimeout());
+			});
+
+		});
+	</script>
+</body>
+</html>
