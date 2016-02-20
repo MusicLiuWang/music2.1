@@ -81,6 +81,7 @@
     margin:0 1px;
     width: 49%;
     padding: 0px 10px;
+    transition: 0.5s;
 }
 #language li a{
     color: #ffffff;
@@ -88,6 +89,12 @@
     height: 46px;
     line-height: 46px;
     text-decoration: none;
+}
+#language li:hover{
+    background-color: rgb(255,255,255);
+}
+#language li:hover a{
+    color: #721F1F;
 }
 #language .active{
     background-color: rgba(0, 0, 0, 0.3);
@@ -109,13 +116,13 @@
     font-style: normal
 }
 .zanzhu{
-    height: 100px;
-    margin-top: 70px;
+    height: 80px;
+    margin-top: 60px;
 }
 .zanzhu img{
     height: 100%;
     box-shadow: #080808;
-    width: 22%;
+    width: 15%;
     border-radius: 3px;
 }
 #copyright{
