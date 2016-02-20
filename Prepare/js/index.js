@@ -3,9 +3,19 @@
  */
 
 $(function(){
-    $('#dowebok').fullpage({
+	 $('#dowebok').fullpage({
         sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90', '#f09'],
         anchors: ['page1', 'page2', 'page3', 'page4','page5'],
         menu: '#menu'
+    });
+
+    $('#review').click(function(){
+    	var display =$('.dropdown-menu').css('display');
+    	if(display == 'none'){
+    	   $('.dropdown-menu').show();
+    	}else{
+    		$('.dropdown-menu').hide();
+    	}
+    	
     });
 });
