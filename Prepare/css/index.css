@@ -94,7 +94,7 @@
     color: #ffffff;
     text-decoration: none;
 }
-#language li:hover a{
+#language li a:hover{
     background-color: rgb(255,255,255);
     color: #721F1F;
 }
