@@ -1,7 +1,8 @@
-.section{
+.section {
     position: relative;
 }
-.bg-wrap{
+
+.bg-wrap {
     width: 100%;
     height: 100%;
     background-color: red;
@@ -9,21 +10,25 @@
     left: 0px;
     top: 0px;
 }
-.bg-wrap .bg-img{
+
+.bg-wrap .bg-img {
     width: 100%;
     height: 100%;
 }
-.nav{
+
+.nav {
     position: absolute;
     width: 100%;
     height: 46px;
     background: #A22C2C;
     top: 0px;
 }
-.main-info .pic-text{
+
+.main-info .pic-text {
     max-width: 100%;
     margin-top: 2%;
 }
+
 #menu {
     margin: 0;
     padding: 0;
@@ -33,17 +38,19 @@
     list-style-type: none;
     z-index: 70;
 }
+
 #menu li {
-    margin-top: 30px;
+    margin-top: 3%;
     font-size: 14px;
 }
+
 #menu a {
     display: block;
     width: 100%;
     margin-top: 18px;
     padding: 10px 20px;
     letter-spacing: 2px;
-    font-family:"Microsoft YaHei", sans-serif;
+    font-family: "Microsoft YaHei", sans-serif;
     background-color: #fff;
     color: #333;
     font-size: 90%;
@@ -61,30 +68,31 @@
     color: #fff;
 }
 
-.main-info{
+.main-info {
     position: absolute;
     width: 70%;
     height: 70%;
     background: none;
 }
 
-
-#language{
+#language {
     list-style: none;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     width: 100%;
     height: 46px;
     margin: 0 auto;
     padding-left: 0px;
 }
-#language li{
+
+#language li {
     float: left;
     display: inline-block;
     margin: 0;
     padding: 0;
     width: 48%;
 }
-#language li a{
+
+#language li a {
     display: inline-block;
     transition: 0.5s;
     height: 46px;
@@ -94,58 +102,99 @@
     color: #ffffff;
     text-decoration: none;
 }
-#language li a:hover{
-    background-color: rgb(255,255,255);
+
+#language li a:hover {
+    background-color: rgb(255, 255, 255);
     color: #721F1F;
 }
-#language .active{
+
+#language .active {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.review{
+.review {
     position: absolute;
-    top:0;
+    top: 0;
     right: 30px;
     height: 46px;
     line-height: 46px;
-    font-size:2rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-.claim{
+.claim {
     padding-top: 10px;
     margin-bottom: 15px;
     list-style: none;
     font-size: 16px;
 }
-.claim li{
-    margin-top: 4px;
+
+.claim li {
+    margin-top: 1px;
     letter-spacing: 2px;
 }
-.claim h3{
-    color:rgba(98, 98, 98, 1)
+
+.claim h3 {
+    color: rgba(98, 98, 98, 1)
 }
-.claim ul p{
+
+.claim ul p {
     font-style: normal
 }
-.zanzhu{
+
+#retrospect {
+    /*width: 70%;*/
+    width: 92%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.wrap-honor {
+    float: left;
+    width: 40%;
+    /*margin: 0 auto;*/
+    margin: 1% 5%;
+    position: relative;
+}
+.wrap-honor:hover .text-info{
+    display: block;
+}
+.honor {
+    width: 100%;
+}
+.text-info{
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+.text-info p{
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+.zanzhu {
     height: 80px;
     margin-top: 60px;
 }
-.zanzhu img{
+
+.zanzhu img {
     height: 100%;
     box-shadow: #080808;
     width: 15%;
     border-radius: 3px;
 }
-#copyright{
+
+#copyright {
     position: absolute;
     bottom: 0px;
     width: 100%;
     text-align: center;
     font-size: 17px;
 }
-#copyright a{
+
+#copyright a {
     color: #ffffff;
     text-decoration: underline;
 }
