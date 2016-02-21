@@ -146,6 +146,32 @@
     font-size: 17px;
 }
 #copyright a{
-    color: #ffffff;
+    color: #fff;
     text-decoration: underline;
+}
+
+.video{
+    background-color: #000;
+    overflow: hidden;
+}
+
+.video .vide-play{
+    width: 70%;
+}
+
+.video .list{
+    width: 30%;
+}
+
+.video .list li{
+    height: 100px;
+}
+
+.video .list a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+.video .list a:hover{
+    color: #fff;
 }
