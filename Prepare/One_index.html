@@ -78,7 +78,7 @@
 				<div class="list-info">
 					<a class="btn btn-default" style="position: relative; left:70%; font-size:30%; margin:-10% 0; padding: 10px;" href="Download/table.docx">点击下载报名表</a>
 					<h2 style="margin-top:-4%;">大赛要求</h2>
-					<ul style="font-size: 16px;" class="claim">
+					<ul  class="claim">
 						<li><p>1、此次比赛要求选手年龄在40周岁以下；</p></li>
 						<li><p>2、参赛选手需准备三首歌剧咏叹调，其中两首必须为意大利语；</p></li>
 						<li><p>3、比赛注册费400元人民币，请选手于4月3日初赛选拔时交到大赛秘书处即可；</p></li>
@@ -86,7 +86,7 @@
 				</div>
 				<div>
 					<h2>报名须知</h2>
-					<ul style="font-size: 16px;" class="claim">
+					<ul  class="claim">
 						<li><p>1、一份填写完毕的报名表，下载地址:<a href="http://www.htu.cn/yyxy" style="color: #ffffff;">河南师范大学音乐舞蹈学院主页http://www.htu.cn/yyxy</a></p></li>
 						<li><p>2、四张2寸同底报名照；</p></li>
 						<li><p>3、报名截止日期：2015年3月21日，请提前通过电子邮箱寄出报名表，以确保中心在截止日期之前收到；</p></li>
@@ -172,7 +172,7 @@
 			<img src="images/yellow-s.png" class="bg-img">
 			<div class="main-info" style="top: 5%;left: 15%;max-height: 70%;">
 				大赛评委
-				<ul class="claim text-left" style="padding-left: 10%; font-size: 26%;max-height: 70%;">
+				<ul class="claim text-left" style="padding-left: 10%;max-height: 70%;">
 					<li>
 						<h3>初赛</h3>
 						<ul>
@@ -262,12 +262,10 @@
 	<div class="section">
 		<div class="bg-wrap">
 			<img src="images/photo.jpg" class="bg-img">
-			<div class="main-info" style="top: 5%;left: 15%;">
+			<div class="main-info" style="top: 3.7%;left: 15%;color: rgba(70, 70, 70, 1);">
 				第一届歌剧声乐大赛
 				<br/>
-				<button class="btn btn-default" onclick="javascript:window.location.href='html/pictures.html'">查看等多</button>
-
-
+				<button class="btn btn-default" style="margin-top: 10px" onclick="javascript:window.location.href='html/pictures.html'">查看更多</button>
 
 				<div id="retrospect">
 					<div class="wrap-honor">
@@ -314,11 +312,10 @@
 	<div class="section">
 		<div class="bg-wrap">
 			<img src="images/1.png" class="bg-img">
-
-			<div class="main-info text-center video" style="top: 10%;left: 20%;">
+			<div class="main-info text-center video" style="top: 10%;left: 15%;">
 				<div class="pull-left video-play">
-				   	<div style="position: relative; left:30%; top:30px;">
-				   		<embed src="http://cache.tv.qq.com/qqplayerout.swf?vid=q01806m4003" allowFullScreen="true" quality="high" width="500" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" ></embed>
+				   	<div class="video_play" style="position: relative; ">
+				   		<embed id="video_embed1" src="http://cache.tv.qq.com/qqplayerout.swf?vid=q01806m4003" autostart=true allowFullScreen="true" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" ></embed>
 				   	</div>
 				</div>
 
@@ -326,31 +323,25 @@
 				    <h3 style="line-height:100px;">视频列表</h3>
 				    <ul>
 				        <li class="clearfix">
-				        	<a href="http://cache.tv.qq.com/qqplayerout.swf?vid=q01806m4003">
-				        		<img src="images/one/one.jpg" class="pull-left" width="80px;" height="50px;" alt="第一名万丹">
-				        		<span class="video-name">
+				        		<img src="images/one/one.jpg" class="pull-left" width="80px;" height="60px;" alt="第一名万丹">
+				        		<span class="video-name" onclick="nameClick(this)" val="http://cache.tv.qq.com/qqplayerout.swf?vid=q01806m4003">
 				        			<p>第一届科尼歌剧声乐大赛</p>
 				        			<p>第一名 万丹</p>
 				        		</span>
-				        	</a>
 				        </li>
 				        <li>
-				        	<a href="http://cache.tv.qq.com/qqplayerout.swf?vid=w0180dldul4">
-				        		<img src="images/one/two.jpg" style="float:left;" width="80px;" height="50px;" alt="第一名万丹">
-				        		<span class="video-name">
+				        		<img src="images/one/two.jpg" style="float:left;" width="80px;" height="60px;" alt="第一名万丹">
+				        		<span class="video-name" onclick="nameClick(this)" val="http://cache.tv.qq.com/qqplayerout.swf?vid=w0180dldul4">
 				        			<p>第一届科尼歌剧声乐大赛</p>
 				        			<p>第二名 蒋志伟</p>
 				        		</span>
-				        	</a>
 				        </li>
 				        <li>
-				        	<a href="http://cache.tv.qq.com/qqplayerout.swf?vid=c0180eg1ypu">
-				        		<img src="images/one/three.jpg" style="float:left;" width="80px;" height="50px;" alt="第一名万丹">
-				        		<span class="video-name">
+				        		<img src="images/one/three.jpg" style="float:left;" width="80px;" height="60px;" alt="第一名万丹">
+				        		<span class="video-name" onclick="nameClick(this)" val="http://cache.tv.qq.com/qqplayerout.swf?vid=c0180eg1ypu">
 				        			<p>第一届科尼歌剧声乐大赛</p>
 				        			<p>　第三名 卢思嘉</p>
 				        		</span>
-				        	</a>
 				        </li>
 				    </ul>
 				</div>
@@ -362,7 +353,7 @@
 	<div class="section">
 		<div class="bg-wrap">
 			<img src="images/1.png" class="bg-img">
-			<div class="claim" style="position: absolute;width: 100%;height: 90%;background: none;top: 20%">
+			<div class="claim" style="position: absolute;width: 100%;height: 90%;background: none;top: 15%">
 				<h1>特别鸣谢</h1>
 				<h2>赞助商</h2>
 				<div>
@@ -376,6 +367,17 @@
 		</div>
 	</div>
 </div>
-
+<script type="text/javascript">
+	function nameClick(obj){
+//		alert(123);
+		//$("#video_embed1").remove();
+		var video_name = $(obj).attr("val");
+//		console.log(video_name);
+//		alert(video_name);
+		//var str = video_name;
+		var str =  '<embed src="'+video_name+'"'+' allowFullScreen="true" '+' allowFullScreen="true" autostart=true quality="high" width="100%" height="100%" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>';
+		$(".video_play").html(str);
+	}
+</script>
 </body>
 </html>

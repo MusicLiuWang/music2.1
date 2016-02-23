@@ -22,13 +22,13 @@
 
 <body>
 <ul id="menu" class="text-center">
-	<li data-menuanchor="page1" class="active"><a href="#page1">HOME</a></li>
-	<li data-menuanchor="page2"><a href="#page2">ENROLL</a></li>
-	<li data-menuanchor="page3"><a href="#page3">SCHEDULE</a></li>
-	<li data-menuanchor="page4"><a href="#page4">JURY</a></li>
-	<li data-menuanchor="page5"><a href="#page5">REVIEW</a></li>
-	<li data-menuanchor="page6"><a href="#page6">VIDEO</a></li>
-	<li data-menuanchor="page7"><a href="#page7">SUPPORT</a></li>
+	<li data-menuanchor="page1" class="active" ><a href="#page1" style="padding:12px 15px;">HOME</a></li>
+	<li data-menuanchor="page2" ><a href="#page2" style="padding:12px 15px;">ENROLL</a></li>
+	<li data-menuanchor="page3" ><a href="#page3" style="padding:12px 15px;">SCHEDULE</a></li>
+	<li data-menuanchor="page4" ><a href="#page4" style="padding:12px 15px;">JURY</a></li>
+	<li data-menuanchor="page5" ><a href="#page5" style="padding:12px 15px;">REVIEW</a></li>
+	<li data-menuanchor="page6" ><a href="#page6" style="padding:12px 15px;">VIDEO</a></li>
+	<li data-menuanchor="page7" ><a href="#page7" style="padding:12px 15px;">SUPPORT</a></li>
 </ul>
 
 <div id="dowebok">
@@ -256,7 +256,7 @@
 	<div class="section">
 		<div class="bg-wrap">
 			<img src="images/photo.jpg" class="bg-img">
-			<div class="main-info" style="top: 5%;left: 15%;max-height: 70%;">
+			<div class="main-info" style="top: 4%;left: 15%;max-height: 70%;color: rgba(70, 70, 70, 1)">
 				The first opera vocal music competition
 				<br/>
 				<button class="btn btn-default" onclick="javascript:window.location.href='html/pictures.html'">More</button>
@@ -296,12 +296,45 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="section">
 		<div class="bg-wrap">
 			<img src="images/1.png" class="bg-img">
-			<div class="main-info" style="top: 5%;left: 15%;max-height: 70%;">
-				zxcv
+			<div class="main-info text-center video" style="top: 10%;left: 15%;">
+				<div class="pull-left video-play">
+					<div class="video_play" style="position: relative; ">
+						<embed id="video_embed1" src="http://cache.tv.qq.com/qqplayerout.swf?vid=q01806m4003" autostart=true allowFullScreen="true" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" ></embed>
+					</div>
+				</div>
+
+				<div class="pull-right list" style="font-size:30%;">
+					<h3 style="line-height:100px;">Video list</h3>
+					<ul>
+						<li class="clearfix">
+							<img src="images/one/one.jpg" class="pull-left" width="80px;" height="60px;" alt="第一名万丹">
+				        		<span class="video-name" onclick="nameClick(this)" val="http://cache.tv.qq.com/qqplayerout.swf?vid=q01806m4003">
+				        			<p>The first coney opera vocal music competition</p>
+				        			<p>First Wan dan</p>
+				        		</span>
+						</li>
+						<li>
+							<img src="images/one/two.jpg" style="float:left;" width="80px;" height="60px;" alt="第一名万丹">
+				        		<span class="video-name" onclick="nameClick(this)" val="http://cache.tv.qq.com/qqplayerout.swf?vid=w0180dldul4">
+				        			<p>The first coney opera vocal music competition</p>
+				        			<p>Second Jiang Zhiwei</p>
+				        		</span>
+						</li>
+						<li>
+							<img src="images/one/three.jpg" style="float:left;" width="80px;" height="60px;" alt="第一名万丹">
+				        		<span class="video-name" onclick="nameClick(this)" val="http://cache.tv.qq.com/qqplayerout.swf?vid=c0180eg1ypu">
+				        			<p>The first coney opera vocal music competition</p>
+				        			<p>The third Lu Sijia</p>
+				        		</span>
+						</li>
+					</ul>
+				</div>
 			</div>
+
 		</div>
 	</div>
 

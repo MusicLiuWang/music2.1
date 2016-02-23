@@ -47,7 +47,7 @@
 #menu a {
     display: block;
     width: 100%;
-    margin-top: 18px;
+    margin-top: 16px;
     padding: 10px 20px;
     letter-spacing: 2px;
     font-family: "Microsoft YaHei", sans-serif;
@@ -123,25 +123,23 @@
 }
 
 .claim {
-    padding-top: 10px;
-    margin-bottom: 15px;
+    padding-top: 6px;
     list-style: none;
-    font-size: 16px;
+    font-size:1.4rem;
 }
 
 .claim li {
-    margin-top: 1px;
     letter-spacing: 2px;
 }
 
 .claim h3 {
+    margin-top: 19px;
+    margin-bottom: 7px;
     color: rgba(98, 98, 98, 1)
 }
 
-.claim ul p {
-    font-style: normal
+.claim p{
 }
-
 #retrospect {
     /*width: 70%;*/
     width: 92%;
@@ -198,6 +196,10 @@
     text-decoration: underline;
 }
 
+.video-name{
+    text-align: center;
+}
+
 .video{
     background-color: #000;
     overflow: hidden;
@@ -207,19 +209,28 @@
     width: 70%;
 }
 
-.video .list{
-    width: 30%;
+.video-play{
+    width: 68%;
+    height: 100%;
+}
+.video-play div{
+    height: 100%;
 }
 
+.video .list{
+    margin-left: 1%;
+    width: 29%;
+    height: 100%;
+}
 .video .list li{
     height: 100px;
+    cursor: pointer;
 }
-
-.video .list a{
+.video .list p{
     color: #ccc;
     text-decoration: none;
 }
 
-.video .list a:hover{
+.video .list li:hover p{
     color: #fff;
 }

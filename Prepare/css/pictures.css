@@ -372,3 +372,6 @@ strong {
   text-align: center;
   color:#d3d3d3;
 }
+.slider-item a{
+  text-decoration: none;
+}
